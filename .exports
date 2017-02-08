@@ -15,4 +15,4 @@ command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
 eval "$(gdircolors -b ~/.dircolors)"
 
 # add bin folder
-export PATH="${HOME]/bin:${PATH}"
+export PATH="${HOME}/bin:${PATH}"
