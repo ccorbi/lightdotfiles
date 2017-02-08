@@ -184,3 +184,4 @@ main() {
 }
 
 main
+echo -n "#add special stuff here" > $HOME/.extra
