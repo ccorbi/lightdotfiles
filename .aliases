@@ -10,7 +10,7 @@ alias -- -="cd -"
 # Disk Usage
 alias du='du -h'
 alias df='df -h'
-alias dug='du -h --max-depth=1'
+alias duoverview='du . -h --max-depth=1'
 
 # mv, rm, cp
 alias mv='mv -v'
