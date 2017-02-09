@@ -19,6 +19,6 @@ echo "Will delete the following jobs: ${#ALLJOBS[@]}"
 
 
 for j in ${ALLJOBS[@]}; do
-    echo 'stopping ${j}'
+    echo "Stopping ${j}"i;
     qdel ${j}
 done
