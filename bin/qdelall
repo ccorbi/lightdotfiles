@@ -1,0 +1,24 @@
+
+#!/bin/bash
+
+#  a fork of  Thomas Kono script https://github.com/TomJKono/Misc_Utils/blob/master/Mass_Job_Deletion.sh
+
+
+#   A script to delete all jobs from cluster
+#   batch system (PBS).
+
+set -e
+set -u
+set -o pipefail
+
+
+
+ALLJOBS=($(qstat -a -u ${USER} | tail -n +6 | cut -f 1 -d ' ' | cut -f 1 -d '.'))
+
+echo "Will delete the following jobs: ${#ALLJOBS[@]}"
+
+
+for j in ${ALLJOBS[@]}; do
+    echo 'stopping ${j}'
+    qdel ${j}
+done
